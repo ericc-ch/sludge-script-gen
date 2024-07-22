@@ -1,4 +1,4 @@
-import { Hono } from 'hono'
+import { Hono } from "hono"
 
 type Bindings = {
   [key in keyof CloudflareBindings]: CloudflareBindings[key]
@@ -6,8 +6,8 @@ type Bindings = {
 
 const app = new Hono<{ Bindings: Bindings }>()
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
+app.get("/", (c) => {
+  return c.text("Hello Hono!")
 })
 
 export default app

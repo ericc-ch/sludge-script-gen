@@ -1,15 +1,26 @@
 {
   "name": "sludge-script-gen",
+  "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
     "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "dev": "wrangler dev",
+    "format": "prettier --write .",
+    "lint": "eslint ."
   },
   "dependencies": {
     "hono": "^4.5.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240718.0",
+    "@eslint/js": "^9.7.0",
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^7.17.0",
     "wrangler": "^3.65.1"
   }
 }
